@@ -1,8 +1,8 @@
 # Anomaly Detection and Visualization
 
-- Using Phase 1 analysis to detect ouliers and build SPC chart
+_Using Phase 1 analysis to detect ouliers and build SPC chart_
 
- > _Phase 1 analysis means the process of finding data's outliers, where data has unknown population mean and variance._
+  > _Phase 1 analysis means the process of finding data's outliers, where data has unknown population mean and variance._
 
 The goal of this repo :
 - Write a algorithm that is able to detect ouliers from a multivariate dataset based on __Hotelling $T^2$ statistics, m-CUSUM, and m-EWMA chart__ .
