@@ -1,4 +1,6 @@
-# Phase 1 analysis and building SPC chart
+# Anomaly Detection and Visualization
+
+- Using Phase 1 analysis to detect ouliers and build SPC chart
 
  > _Phase 1 analysis means the process of finding data's outliers, where data has unknown population mean and variance._
 
