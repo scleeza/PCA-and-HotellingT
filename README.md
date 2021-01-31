@@ -44,16 +44,20 @@ Form of $T^2$:
 
 - Code implement:
 ```python
-# covariance matrix of trimmed dataset
-cov_mat=np.cov(X_pca.T)
-cov_mat_inv=np.linalg.inv(cov_mat)
-# X bar matrix
-X_bar=[X_pca[:,i].mean() for i in range(0,pca_num)]
-# calculating X_j-X_bar
-X_sub=[X_pca[i,:]-X_bar for i in range(len(X_pca))]
-X_sub=np.asmatrix(X_sub)
-# calculating T^2 statistics
-T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) for i in range(len(X_sub))]
+def hotelling_T(X):
+    '''create multivariate t-statistics'''
+    # create covariance matrix
+    cov_mat=np.cov(X.T)
+    cov_mat_inv=np.linalg.inv(cov_mat)
+    cov_mat.shape
+    # calcualate x-mean
+    X_bar=[X[:,i].mean() for i in range(0,pca_num)]
+    # calculating X_j-X_bar
+    X_sub=[X[i,:]-X_bar for i in range(len(X_pca))]
+    X_sub=np.asmatrix(X_sub)
+    # calculating T^2 statistics
+    t_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) for i in range(len(X_sub))]
+    return t_tsquare
 ```
 
 ## 2.PCA 
