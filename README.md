@@ -1,6 +1,6 @@
 # Phase 1 analysis and building SPC chart
 
- > _For data that with unknown population meean and variance, the process of finding its true mean/var is so called Phase 1 analysis_. 
+ > _Phase 1 analysis means the process of finding data's outliers, where data has unknown population mean and variance._
 
 The goal of this repo :
 - Write a algorithm that is able to detect ouliers from a multivariate dataset based on __Hotelling $T^2$ statistics, m-CUSUM, and m-EWMA chart__ .
@@ -75,16 +75,16 @@ T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) fo
 # Result
 
 ## 1. PCA 
->__Pareto plot__
-![pareto](images/pareto.png)
-__Scree plot__
+>__Pareto plot__\
+![pareto](images/pareto.png)\
+__Scree plot__\
 ![screeplot](images/steer.png)
 
 ## 2. Calculated $`T^2`$
->__Before removal__
-![t](images/t2.png)
->__After removed outliers__
+>__Before removal__\
+![t](images/t2.png)\
+>__After removed outliers__\
 ![t](images/t2-after.png)
 ## 3. Use m-Cusum to verified again
->__Can find there still remain unremoved small shift__
+>__Can find there still remain unremoved small shift__\
 ![cusum](images/mcusum.png)
