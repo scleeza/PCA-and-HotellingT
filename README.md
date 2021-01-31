@@ -75,14 +75,17 @@ T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) fo
 
 # Result
 ---
-- 1. PCA 
-Varaice explain ratio, use for chose pc numbers
+## 1. PCA 
+>__Pareto plot__
 ![pareto](images/pareto.png)
-Scree plot 
+__Scree plot__
 ![screeplot](images/steer.png)
-- 2. $T^2$
+
+## 2. Calculated $T^2$
+>__Before removal__
 ![t](images/t2.png)
-After removing outliers
+>__After removed outliers__
 ![t](images/t2-after.png)
-- 3. Use m-Cusum to verified again
+## 3. Use m-Cusum to verified again
+>__Can find there still remain unremoved small shift__
 ![cusum](images/mcusum.png)
