@@ -37,7 +37,7 @@ The goal of this repo :
 
 Form of $T^2$:
 
->![t-statistics](images/t-statistics.png)
+>[t-statistics](images/t-statistics.png)
 
 - After we have $T^2$, we can lookup to F-dist table to find certain upper/lower control limits. where n = observations, p = dimension.
 
@@ -57,15 +57,19 @@ T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) fo
 
 ## 2.PCA 
 - The Basic idea of PCA is simple, it is trying to find **_Vital View_** instead of **_Trivial Many_** , if we put things into a 2D chart, the axis with highest variance is the vital view since it contains more information.
-![pca](images/pca.png)
+>[pca_illustration](images/pca.png)
 
 ## 3.m-CUSUM
+- Basic idea is to create sliding window to subset data, and comparing difference between subsets.
 >[cusum_explain](images/cusum.png)
 
+- Hyper parameter k is used for determine memory length of previous subsets.
 >[cusum_explain_2](images/cusum2.png)
 ## 4.m-EWMA
+- Like m-Cusum did, instead of using sliding window, here use eponential weighted average to include previous trend
 >[ewma_explain](images/ewma.png)
 
+- The UCL needs to be done Montecarlo simulation 
 >[ewma_explian_2](images/ewma2.png)
 
 
