@@ -1,4 +1,5 @@
 # Phase 1 analysis and building SPC chart
+
 ---
 > _For data that with unknown population meean and variance, the process of finding its true mean/var is so called Phase 1 analysis_. 
 
