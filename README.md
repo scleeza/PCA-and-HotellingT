@@ -80,7 +80,7 @@ T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) fo
 __Scree plot__
 ![screeplot](images/steer.png)
 
-## 2. Calculated T^2
+## 2. Calculated $`T^2`$
 >__Before removal__
 ![t](images/t2.png)
 >__After removed outliers__
