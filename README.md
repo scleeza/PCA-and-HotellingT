@@ -60,11 +60,11 @@ T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) fo
 
 ## 3.m-CUSUM
 - The small m implies multivariate
-![cusum](images/cusum.png)
-![cusum2](images/cusum2.png)
+>![cusum](images/cusum.png)
+>![cusum2](images/cusum2.png)
 ## 4.m-EWMA
-![ewma](images/ewma.png)
-![ewma](images/ewma2.png)
+>![ewma](images/ewma.png)
+>![ewma](images/ewma2.png)
 
 
 # Result
