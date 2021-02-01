@@ -82,7 +82,7 @@ def mT_square(inputdata,alpha=0.05):
 >__Pareto plot__\
 ![pareto](_images/pareto.png)\
 __Scree plot__\
-![screeplot](_images/steer.png)\
+![screeplot](_images/scree.png)\
 __Dist plot__\
 ![Displot](_images/before.png)
 
