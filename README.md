@@ -81,8 +81,6 @@ def mT_square(inputdata,alpha=0.05):
 ## 1. PCA 
 >__Pareto plot__\
 ![pareto](_images/pareto.png)\
-__Scree plot__\
-![screeplot](_images/scree.png)\
 __Dist plot__\
 ![Displot](_images/before.png)
 
