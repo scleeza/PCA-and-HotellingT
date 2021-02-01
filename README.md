@@ -79,20 +79,21 @@ def mT_square(inputdata,alpha=0.05):
 # Result
 
 ## 1. PCA 
->__Pareto plot__\
-![pareto](_images/pareto.png)\
-__Dist plot__\
-![Displot](_images/before.png)
+- __Pareto plot__\
+   ![pareto](_images/pareto.png)\
+- __Dist plot__\
+   ![Displot](_images/before.png)
 
 
 ## 2. Calculated $`T^2`$
->__After T-statitical removal__\
-![t](_images/t_test.png)\
-![d](_images/after_tsquare.png)\
->__Applied m-Cusum __\
-![t](_images/t_test_cu.png)
-![d](_images/after_cusum.png)\
-## 3. Use m-Cusum to verified again
->__Applied m-EWMA__\
-![t](_images/t_test_ewma.png)\
-![d](_images/after_ewma.png)\
+- __After T-statitical removal__\
+   ![t](_images/t_test.png)\
+   ![d](_images/after_tsquare.png)\
+
+- __Applied m-Cusum __\
+   ![t](_images/t_test_cu.png)
+   ![d](_images/after_cusum.png)\
+
+-__Applied m-EWMA__\
+   ![t](_images/t_test_ewma.png)\
+   ![d](_images/after_ewma.png)\
