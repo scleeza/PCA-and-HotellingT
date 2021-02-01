@@ -17,8 +17,9 @@ The goal of this repo :
 # Procedure
 
 -  PCA, reduce dimension of the dataset, avoid curse of dimesionality.
--  Hotelling $T^2$ test for phase 1 analysis, we use $T^2$ to plot SPC in order to remove outliers (out of 3once we remove oulier and get population mean/var, SPC will able to be build.
-- Multi-variate chart like CUSUM or EWMA are also implemented to do outlier removal in case that $T^2$ missed some small shiftment.
+-  Hotelling $T^2$ test for phase 1 analysis, we use $T^2$ to represent a how a point is located in a multivariate normal distribuiton (like t-statistics did). 
+-  Plot SPC in order to remove outliers (find UCL/LCL, under alpha = 0.05, basically lookup from dist table).
+-  Multi-variate chart like CUSUM or EWMA are also implemented to do outlier removal in case that $T^2$ missed some small shiftment.
 
     >In a high dimension, the noise components can add up to a great magnitude, even if individual ones are relatively small. As a result, the aggregated noise effect can overwhelm the signal effects and makes it harder to reject the null hypothesis. This is known as "curse of dimensionality."
 
