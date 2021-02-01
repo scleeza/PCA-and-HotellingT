@@ -91,7 +91,7 @@ def mT_square(inputdata,alpha=0.05):
    ![d](_images/after_tsquare.png)\
 
 - __Applied m-Cusum __\
-   ![t](_images/t_test_cu.png)
+   ![t](_images/t_test_cu.png)\
    ![d](_images/after_cusum.png)\
 
 -__Applied m-EWMA__\
