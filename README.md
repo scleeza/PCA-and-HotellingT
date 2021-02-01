@@ -44,20 +44,18 @@ Form of $T^2$:
 
 - Code implement:
 ```python
-def hotelling_T(X):
-    '''create multivariate t-statistics'''
-    # create covariance matrix
-    cov_mat=np.cov(X.T)
+def mT_square(inputdata,alpha=0.05):
+    "input data and calculate the T sqaure statistic, if there have outlier in the result then remove off"
+    # covariance matrix of trimmed dataset
+    cov_mat=np.cov(inputdata.T)
     cov_mat_inv=np.linalg.inv(cov_mat)
-    cov_mat.shape
-    # calcualate x-mean
-    X_bar=[X[:,i].mean() for i in range(0,pca_num)]
-    # calculating X_j-X_bar
-    X_sub=[X[i,:]-X_bar for i in range(len(X_pca))]
+    X_bar=[inputdata[:,i].mean() for i in range(len(inputdata[0,:]))]
+    # calculating X_-X_bar
+    X_sub=[inputdata[i,:]-X_bar for i in range(len(inputdata))]
     X_sub=np.asmatrix(X_sub)
     # calculating T^2 statistics
-    t_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) for i in range(len(X_sub))]
-    return t_tsquare
+    T_square=[np.float(np.matmul(np.matmul(X_sub[i,:],cov_mat_inv),X_sub[i,:].T)) for i in range(len(X_sub))]
+    return np.asarray(T_square)
 ```
 
 ## 2.PCA 
@@ -82,15 +80,21 @@ def hotelling_T(X):
 
 ## 1. PCA 
 >__Pareto plot__\
-![pareto](images/pareto.png)\
+![pareto](_images/pareto.png)\
 __Scree plot__\
-![screeplot](images/steer.png)
+![screeplot](_images/steer.png)\
+__Dist plot__\
+![Displot](_images/before.png)
+
 
 ## 2. Calculated $`T^2`$
->__Before removal__\
-![t](images/t2.png)\
->__After removed outliers__\
-![t](images/t2-after.png)
+>__After T-statitical removal__\
+![t](_images/t_test.png)\
+![d](_images/after_tsquare.png)\
+>__Applied m-Cusum __\
+![t](_images/t_test_cu.png)
+![d](_images/after_cusum.png)\
 ## 3. Use m-Cusum to verified again
->__Can find there still remain unremoved small shift__\
-![cusum](images/mcusum.png)
+>__Applied m-EWMA__\
+![t](_images/t_test_ewma.png)\
+![d](_images/after_ewma.png)\
